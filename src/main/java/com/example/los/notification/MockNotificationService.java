@@ -10,16 +10,16 @@ public class MockNotificationService implements NotificationService {
 
     @Override
     public void pushToAgent(Long agentId, String message) {
-        log.info("[MOCK_PUSH] to agent {}: {}", agentId, message);
+        log.info("MOCK_NOTIFICATION pushed to agent {}: {}", agentId, message);
     }
 
     @Override
     public void pushToManager(Long managerId, String message) {
-        log.info("[MOCK_PUSH] to manager {}: {}", managerId, message);
+        log.info("MOCK_NOTIFICATION pushed to manager {}: {}", managerId, message);
     }
 
     @Override
     public void smsToCustomer(String phone, String message) {
-        log.info("[MOCK_SMS] to {}: {}", phone, message);
+        log.info("MOCK_NOTIFICATION pushed to {}: {}", phone, message);
     }
 }

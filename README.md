@@ -1,15 +1,33 @@
-# Loan Origination System (LOS) - Spring Boot
+# Loan Origination System (LOS) – Spring Boot
 
-## What is included
-- REST APIs to submit loans, agent decisions, status counts, top customers and fetch loans by status with pagination.
-- Background thread-pool based processor that simulates system approval with delays and assigns loans to agents when needed.
-- Mock `NotificationService` that logs notifications (push/SMS).
-- Uses H2 in-memory DB by default. Instructions to switch to MySQL/Postgres provided.
-- Postman collection included.
+This is a **Loan Origination System (LOS)** built with Spring Boot that allows safe, concurrent processing of loan applications. It:
 
-## Run locally
-1. Java 17+, Maven installed.
-2. Build & run:
+- Provides RESTful APIs for submitting loans, agent decisions, status counts, top customers, and paginated loan retrieval.
+- Simulates background processing delays (~25 seconds) using a thread-pool-based processor.
+- Offers a mock `NotificationService` that logs notifications (e.g., push or SMS).
+- Utilizes an in-memory H2 database by default, with optional configuration to use MySQL or PostgreSQL.
+- Includes a Postman collection for easy API testing.
+
+---
+
+##  Getting Started
+
+### Prerequisites
+
+Ensure your development environment includes:
+
+- **Java 17** or higher
+- **Apache Maven**
+- (Optional) MySQL or PostgreSQL if choosing an external database over the default H2
+
+### Running Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vaibhav-kolekar/turnoLOS.git
+   cd turnoLOS
+   
+2. Run command
 ```bash
 mvn spring-boot:run
 ```
